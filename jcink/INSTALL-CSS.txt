@@ -1,0 +1,9 @@
+/* WHIMSICAL WANDERER — JCINK INSTALL
+   Replace YOUR-HOST.example/whimsical-wanderer with the public URL
+   where you uploaded this folder.
+
+   Put these imports at the TOP of the JCink stylesheet.
+*/
+
+@import url("https://greenberryhair.github.io/whimsical-wanderer/assets/css/single-v1.css");
+@import url("https://greenberryhair.github.io/whimsical-wanderer/assets/css/multiple-v1.css");

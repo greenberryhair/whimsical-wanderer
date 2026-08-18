@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Whimsical Wanderer — JCink Want Ads</title>
+<style>
+:root{--ink:#403331;--plum:#563543;--paper:#e7dccb;--gold:#9c7c46}
+*{box-sizing:border-box}
+body{margin:0;background:#2a2422;color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+main{width:min(980px,calc(100% - 28px));margin:34px auto;background:var(--paper);border:1px solid rgba(156,124,70,.7);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.hero{padding:48px 30px 34px;text-align:center;border-bottom:1px solid rgba(156,124,70,.5)}
+h1,h2{color:var(--plum);font-weight:normal;letter-spacing:.04em}
+h1{margin:0 0 10px;font-size:clamp(32px,6vw,62px)}
+.hero p{margin:0;font-style:italic}
+section{padding:28px 34px;border-bottom:1px solid rgba(156,124,70,.35)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{padding:18px;background:rgba(255,255,255,.28);border:1px solid rgba(156,124,70,.45)}
+a{color:var(--plum)}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre{overflow:auto;padding:16px;background:#312a28;color:#f4eadc;line-height:1.45}
+.thumb{display:block;width:100%;border:1px solid rgba(156,124,70,.5);margin-bottom:14px}
+.small{font-size:.92rem;color:#675e52}
+@media(max-width:700px){.cards{grid-template-columns:1fr}section{padding:22px 18px}}
+</style>
+</head>
+<body>
+<main>
+  <div class="hero">
+    <h1>Whimsical Wanderer</h1>
+    <p>JCink want ads for characters, connections, and stories waiting to be found.</p>
+  </div>
+
+  <section>
+    <h2>Templates</h2>
+    <div class="cards">
+      <div class="card">
+        <img class="thumb" src="assets/images/wa-whimsicalwanderer-bg.png" alt="Single character want ad artwork">
+        <h2>Single Character</h2>
+        <p><a href="examples/single-preview.html">Open browser preview</a></p>
+        <p><a href="jcink/single-want-ad.html">JCink HTML</a></p>
+      </div>
+      <div class="card">
+        <img class="thumb" src="assets/images/mwa-whimsicalwanderer-card.png" alt="Multiple character want ad artwork">
+        <h2>Multiple Character</h2>
+        <p><a href="examples/multiple-preview.html">Open browser preview</a></p>
+        <p><a href="jcink/multiple-want-ad.html">JCink HTML</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>JCink installation</h2>
+    <p>Upload this folder, then replace the example host with your public URL. Put these imports at the top of the JCink stylesheet:</p>
+    <pre>@import url("https://greenberryhair.github.io/whimsical-wanderer/assets/css/single-v1.css");
+@import url("https://greenberryhair.github.io/whimsical-wanderer/assets/css/multiple-v1.css");</pre>
+  </section>
+
+  <section>
+    <h2>Self-host every image</h2>
+    <p>The packaged CSS already loads its artwork locally. For image URLs written directly into the JCink HTML, use the files ending in <code>-selfhost.html</code> and replace the example host URL.</p>
+  </section>
+
+  <section>
+    <h2>Safe updates</h2>
+    <p>Keep the v1 CSS stable after other sites begin using it. Publish future visual revisions as v2 so old posts remain unchanged.</p>
+    <p class="small">Cormorant Garamond is loaded from Google Fonts; font files are not bundled.</p>
+  </section>
+</main>
+</body>
+</html>
