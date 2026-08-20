@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Parisienne&display=swap');
 
+
+/* =========================================================
+   WHIMSICAL WANDERER — SINGLE CHARACTER PLOTTER
+   JCINK VERSION
+   ========================================================= */
+
 .ww-plotter,
 .ww-plotter * {
     box-sizing: border-box;
@@ -86,6 +92,7 @@
     left: 6.2%;
     top: 52.5%;
     width: 35.5%;
+
     font-family: "Lora", Georgia, serif;
     font-size: 11px;
     font-weight: 600;
@@ -99,8 +106,20 @@
     min-height: 21px;
 }
 
+.ww-details {
+    left: 6.2%;
+    top: 52.5%;
+    width: 35.5%;
+
+    font-family: "Lora", Georgia, serif;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
 .ww-detail b {
     color: var(--ww-rust);
+
     font-family: "Lora", Georgia, serif;
     font-size: 9px;
     font-weight: 600;
@@ -181,9 +200,12 @@
     display: grid;
     grid-template-columns: 45% 55%;
     align-items: center;
+
     width: 100%;
     height: 12.7%;
+
     color: var(--ww-brown);
+
     font-family: "Lora", Georgia, serif;
     font-size: 11px;
     font-weight: 600;
@@ -292,19 +314,20 @@
     width: 94%;
     height: 73%;
     margin: 5% auto 0;
+    position: relative;
+    left: 7px;
+
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
     justify-items: center;
-    position: relative;
-    left: 7px;
 }
 
 .ww-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 19%;
     height: 100%;
     border: 0 !important;
     text-decoration: none !important;
@@ -313,9 +336,10 @@
 
 .ww-link img {
     display: block;
-    width: 90px;
+    width: 75px;
     height: auto;
     max-width: none;
+
     border: 0 !important;
     box-shadow: none !important;
 }
@@ -328,16 +352,23 @@
     overflow-x: hidden;
     overflow-y: auto;
     padding: 6px 11px;
+
     color: var(--ww-brown);
-    background-color: rgba(223, 196, 164, .32);
-    box-shadow: inset 0 0 12px rgba(223, 196, 164, .25);
+
+    background-color: rgba(223, 196, 164, 0.32);
+
+    box-shadow:
+        inset 0 0 12px rgba(223, 196, 164, 0.25);
+
     font-family: "Lora", Georgia, serif;
     font-size: 12px;
     font-weight: 600;
     line-height: 1.5;
+
     text-shadow:
-        0 0 2px rgba(223, 196, 164, .95),
-        0 0 4px rgba(223, 196, 164, .75);
+        0 0 2px rgba(223, 196, 164, 0.95),
+        0 0 4px rgba(223, 196, 164, 0.75);
+
     scrollbar-width: thin;
     scrollbar-color: var(--ww-brown) rgba(73, 51, 38, .08);
 }
@@ -374,4 +405,4 @@
     left: 0;
     color: var(--ww-rust);
     font-size: 8px;
-}
+}	
