@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Parisienne&display=swap');
+
+.ww-plotter,
+.ww-plotter * {
+    box-sizing: border-box;
+}
+
+.ww-plotter {
+    --ww-brown: #493326;
+    --ww-rust: #92584d;
+    --ww-muted: #776b4c;
+    position: relative;
+    width: 800px;
+    height: 998px;
+    margin: 25px auto;
+    color: var(--ww-brown);
+    font-family: Georgia, "Times New Roman", serif;
+    overflow: hidden;
+}
+
+.ww-portrait {
+    position: absolute;
+    left: 6.2%;
+    top: 5%;
+    width: 35.8%;
+    height: 36.4%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.ww-portrait img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.ww-plotter-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.ww-character-name,
+.ww-character-quote,
+.ww-details,
+.ww-about,
+.ww-plot-ideas,
+.ww-traits,
+.ww-connections,
+.ww-ooc,
+.ww-links {
+    position: absolute;
+    z-index: 3;
+}
+
+.ww-character-name {
+    left: 5.2%;
+    top: 42%;
+    width: 38%;
+    text-align: center;
+    color: var(--ww-brown);
+    font-family: "Parisienne", cursive;
+    font-size: 40px;
+    line-height: 1;
+}
+
+.ww-character-quote {
+    left: 7%;
+    top: 46%;
+    width: 34.5%;
+    text-align: center;
+    color: var(--ww-brown);
+    font-size: 13px;
+    line-height: 1.35;
+    font-style: italic;
+}
+
+.ww-details {
+    left: 6.2%;
+    top: 52.5%;
+    width: 35.5%;
+    font-family: "Lora", Georgia, serif;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.ww-detail {
+    display: grid;
+    grid-template-columns: 46% 54%;
+    align-items: center;
+    min-height: 21px;
+}
+
+.ww-detail b {
+    color: var(--ww-rust);
+    font-family: "Lora", Georgia, serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: .3px;
+}
+
+.ww-detail span {
+    padding: 2px 0 2px 5px;
+    border-bottom: 1px dotted rgba(73, 51, 38, .25);
+}
+
+.ww-section-title {
+    width: 100%;
+    text-align: center;
+    color: var(--ww-brown);
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+}
+
+.ww-about {
+    left: 4.3%;
+    top: 68.2%;
+    width: 39.4%;
+    height: 28.4%;
+}
+
+.ww-about .ww-section-title {
+    height: 9%;
+    position: relative;
+    top: 18px;
+}
+
+.ww-scroll.ww-about-scroll {
+    width: 94%;
+    height: 77%;
+    margin: 7% auto 0;
+}
+
+.ww-plot-ideas {
+    left: 47.5%;
+    top: 1.7%;
+    width: 50%;
+    height: 22.5%;
+}
+
+.ww-plot-ideas .ww-section-title {
+    height: 14%;
+    position: relative;
+    top: 13px;
+    left: 10px;
+}
+
+.ww-plot-scroll {
+    width: calc(100% - 6px);
+    height: 74%;
+    margin: 5% 0 0 6px;
+}
+
+.ww-traits {
+    left: 48%;
+    top: 25.6%;
+    width: 48.5%;
+    height: 20.1%;
+    padding: 0 3%;
+}
+
+.ww-traits .ww-section-title {
+    height: 21%;
+    position: relative;
+    top: 16px;
+    left: 7px;
+}
+
+.ww-trait {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    align-items: center;
+    width: 100%;
+    height: 12.7%;
+    color: var(--ww-brown);
+    font-family: "Lora", Georgia, serif;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.ww-trait-name {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.ww-trait-name::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    margin: 0 8px;
+    border-top: 1px dotted rgba(73, 51, 38, .45);
+}
+
+.ww-trait-dots {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+    margin-left: 35px;
+}
+
+.ww-trait-dots i {
+    display: block;
+    width: 9px;
+    height: 9px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--ww-rust);
+    border-radius: 50%;
+    background: transparent;
+    font-style: normal;
+}
+
+.ww-trait[data-rating="1"] .ww-trait-dots i:nth-child(-n+1),
+.ww-trait[data-rating="2"] .ww-trait-dots i:nth-child(-n+2),
+.ww-trait[data-rating="3"] .ww-trait-dots i:nth-child(-n+3),
+.ww-trait[data-rating="4"] .ww-trait-dots i:nth-child(-n+4),
+.ww-trait[data-rating="5"] .ww-trait-dots i:nth-child(-n+5),
+.ww-trait[data-rating="6"] .ww-trait-dots i:nth-child(-n+6),
+.ww-trait[data-rating="7"] .ww-trait-dots i:nth-child(-n+7),
+.ww-trait[data-rating="8"] .ww-trait-dots i:nth-child(-n+8),
+.ww-trait[data-rating="9"] .ww-trait-dots i:nth-child(-n+9),
+.ww-trait[data-rating="10"] .ww-trait-dots i:nth-child(-n+10) {
+    background: var(--ww-rust);
+}
+
+.ww-connections {
+    left: 47.5%;
+    top: 47.5%;
+    width: 50%;
+    height: 20.1%;
+}
+
+.ww-connections .ww-section-title {
+    height: 15%;
+    position: relative;
+    top: 23px;
+}
+
+.ww-connections-scroll {
+    width: calc(100% - 6px);
+    height: 70%;
+    margin: 7% 0 0 6px;
+}
+
+.ww-ooc {
+    left: 47.5%;
+    top: 68.7%;
+    width: 50%;
+    height: 14.3%;
+}
+
+.ww-ooc .ww-section-title {
+    height: 22%;
+    position: relative;
+    top: 18px;
+    left: -3px;
+}
+
+.ww-ooc-scroll {
+    width: calc(100% - 6px);
+    height: 62%;
+    margin: 5% 0 0 6px;
+}
+
+.ww-links {
+    left: 47.5%;
+    top: 84%;
+    width: 50%;
+    height: 13.5%;
+}
+
+.ww-links .ww-section-title {
+    height: 22%;
+    position: relative;
+    top: 23px;
+}
+
+.ww-links-row {
+    width: 94%;
+    height: 73%;
+    margin: 5% auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    left: 7px;
+}
+
+.ww-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 0 !important;
+    text-decoration: none !important;
+    background: none !important;
+}
+
+.ww-link img {
+    display: block;
+    width: 75px;
+    height: auto;
+    max-width: none;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.ww-link:hover img {
+    opacity: .75;
+}
+
+.ww-scroll {
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 6px 11px;
+    color: var(--ww-brown);
+    background-color: rgba(223, 196, 164, .32);
+    box-shadow: inset 0 0 12px rgba(223, 196, 164, .25);
+    font-family: "Lora", Georgia, serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-shadow:
+        0 0 2px rgba(223, 196, 164, .95),
+        0 0 4px rgba(223, 196, 164, .75);
+    scrollbar-width: thin;
+    scrollbar-color: var(--ww-brown) rgba(73, 51, 38, .08);
+}
+
+.ww-scroll::-webkit-scrollbar {
+    width: 5px;
+}
+
+.ww-scroll::-webkit-scrollbar-track {
+    background: rgba(73, 51, 38, .08);
+}
+
+.ww-scroll::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: var(--ww-brown);
+}
+
+.ww-scroll ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ww-scroll li {
+    position: relative;
+    margin: 0 0 8px;
+    padding: 0 0 0 16px;
+}
+
+.ww-scroll li::before {
+    content: "✦";
+    position: absolute;
+    top: 1px;
+    left: 0;
+    color: var(--ww-rust);
+    font-size: 8px;
+}
